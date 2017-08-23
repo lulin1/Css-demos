@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>水平垂直居中</title>
+	<style type="text/css">
+		.box-wrapper {
+			width: 400px;
+			height: 300px;
+			border: 2px solid #000;
+		}
+		.box {
+			width: 150px;
+			height: 100px;
+			background-color: pink;
+		}
+		.method-one {
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+		.method-one-box {
+			display: flex;
+		    align-items: center;
+		    justify-content: center;
+		}
+		.method-two {
+			position: relative;
+		}
+		.method-two-box {
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    margin-top: -50px;
+		    margin-left: -75px;
+		    text-align: center;
+		    line-height: 100px;
+		}
+		.method-three {
+			position: relative;
+		}
+		.method-three-box {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			text-align: center;
+		    line-height: 100px;
+		}
+		.method-four {
+			position: relative;
+		}
+		.method-four-box {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			text-align: center;
+		    line-height: 100px;
+		}
+		.method-five {
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center; 
+		}
+		.method-five-box {
+			display: inline-block;
+			text-align: center;
+			line-height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div class="method-one box-wrapper"> 
+		<div class="method-one-box box">1</div>
+	</div>
+
+	<div class="method-two box-wrapper"> 
+		<div class="method-two-box box">2</div>
+	</div>
+
+	<div class="method-three box-wrapper"> 
+		<div class="method-three-box box">3</div>
+	</div>
+
+	<div class="method-four box-wrapper"> 
+		<div class="method-four-box box">4</div>
+	</div>
+
+	<div class="method-five box-wrapper"> 
+		<div class="method-five-box box">5</div>
+	</div>
+</body>
+</html>
