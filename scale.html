@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>宽高等比例自适应16:9矩形</title>
+	<style>
+	    .scale {
+	        width: 100%;
+	        padding-bottom: 56.25%;
+	        height: 0; /*其中的关键点就是height: 0;和padding-bottom: 56.25%;*/
+	        position: relative;
+	        background-color: gold;
+	    }
+
+	    .item {
+	        width: 100%;
+	        height: 100%;
+	        background-color: aquamarine;
+	        position: absolute; /*因为元素的height为 0，导致该元素里面再有子元素的时候，就无法正常设置高度。所以我们需要用到position: absolute;*/
+	    }
+	</style>
+</head>
+<body>
+	<div class="scale">
+	    <div class="item">
+	        这里是所有子元素的容器
+	    </div>
+	</div>
+</body>
+</html>
